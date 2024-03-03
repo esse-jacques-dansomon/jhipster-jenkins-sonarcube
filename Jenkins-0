@@ -8,16 +8,6 @@ pipeline {
                 echo "Hello WTF world"
             }
           }
-
-          stage("SonarQube analysis") {
-              agent any
-                steps {
-                     withSonarQubeEnv('sq1') {
-                       sh 'sonar:sonar'
-                     }
-                }
-          }
-
           stage("build & SonarQube analysis") {
             agent any
             steps {
