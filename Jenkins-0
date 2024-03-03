@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo "Hello WTF world"
             }
+          }
           stage("build & SonarQube analysis") {
             agent any
             steps {
